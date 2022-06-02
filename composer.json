@@ -1,7 +1,7 @@
 {
     "name": "nostromo/zxcvbn-php-german",
     "type": "library",
-    "description": "Realistic password strength estimation PHP library based on Zxcvbn JS",
+    "description": "Realistic password strength estimation PHP library based on Zxcvbn JS wiht german dictionary",
     "keywords": ["zxcvbn","password"],
     "homepage": "https://github.com/apiida/zxcvbn-php-german.git",
     "license": "MIT",
