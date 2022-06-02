@@ -9,7 +9,7 @@
          bootstrap="test/config/bootstrap.php">
 
     <testsuites>
-       <testsuite name="Zxcvbn-PHP">
+       <testsuite name="Zxcvbn-PHP-german">
          <directory suffix="Test.php">test/</directory>
        </testsuite>
     </testsuites>

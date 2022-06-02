@@ -21,7 +21,7 @@ class DictionaryTest extends AbstractMatchTest
             '8' => 2,
             '99' => 3,
             '$' => 4,
-            'asdf1234&*' =>  5,
+            'asdf1234&*' => 5,
         ],
     ];
 
@@ -44,6 +44,28 @@ class DictionaryTest extends AbstractMatchTest
     {
         $matches = DictionaryMatch::match($password);
         $this->assertEmpty($matches, "does not match non-dictionary words");
+    }
+
+    /**
+     * @dataProvider madeUpWordsProvider
+     * @param string $password
+     */
+    public function testGermanWordsInDictionary(): void
+    {
+        $matches = DictionaryMatch::match('und');
+        $this->assertNotEmpty($matches, "does not match dictionary words");
+
+        $matches = DictionaryMatch::match('buchmacher');
+        $this->assertNotEmpty($matches, "does not match dictionary words");
+
+        $matches = DictionaryMatch::match('fußspuren');
+        $this->assertNotEmpty($matches, "does not match dictionary words");
+
+        $matches = DictionaryMatch::match('japanerin');
+        $this->assertNotEmpty($matches, "does not match dictionary words");
+
+        $matches = DictionaryMatch::match('überdauert');
+        $this->assertNotEmpty($matches, "does not match dictionary words");
     }
 
     public function testContainingWords(): void
@@ -243,18 +265,18 @@ class DictionaryTest extends AbstractMatchTest
     public function uppercaseVariationProvider(): array
     {
         return [
-            [ '',       1 ],
-            [ 'a',      1 ],
-            [ 'A',      2 ],
-            [ 'abcdef', 1 ],
-            [ 'Abcdef', 2 ],
-            [ 'abcdeF', 2 ],
-            [ 'ABCDEF', 2 ],
-            [ 'aBcdef', 6 ],    // 6 choose 1
-            [ 'aBcDef', 21 ],   // 6 choose 1 + 6 choose 2
-            [ 'ABCDEf', 6 ],    // 6 choose 1
-            [ 'aBCDEf', 21 ],   // 6 choose 1 + 6 choose 2
-            [ 'ABCdef', 41 ],   // 6 choose 1 + 6 choose 2 + 6 choose 3
+            ['', 1],
+            ['a', 1],
+            ['A', 2],
+            ['abcdef', 1],
+            ['Abcdef', 2],
+            ['abcdeF', 2],
+            ['ABCDEF', 2],
+            ['aBcdef', 6],    // 6 choose 1
+            ['aBcDef', 21],   // 6 choose 1 + 6 choose 2
+            ['ABCDEf', 6],    // 6 choose 1
+            ['aBCDEf', 21],   // 6 choose 1 + 6 choose 2
+            ['ABCdef', 41],   // 6 choose 1 + 6 choose 2 + 6 choose 3
         ];
     }
 

@@ -2,23 +2,23 @@ Zxcvbn-PHP is a password strength estimator using pattern matching and minimum e
 
 >zxcvbn attempts to give sound password advice through pattern matching and conservative entropy calculations. It finds 10k common passwords, common American names and surnames, common English words, and common patterns like dates, repeats (aaa), sequences (abcd), and QWERTY patterns.
 
-[![Build Status](https://travis-ci.org/bjeavons/zxcvbn-php.png?branch=master)](https://travis-ci.org/bjeavons/zxcvbn-php)
-[![Coverage Status](https://coveralls.io/repos/github/bjeavons/zxcvbn-php/badge.svg?branch=master)](https://coveralls.io/github/bjeavons/zxcvbn-php?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/bjeavons/zxcvbn-php/v/stable)](https://packagist.org/packages/bjeavons/zxcvbn-php)
-[![License](https://poser.pugx.org/bjeavons/zxcvbn-php/license)](https://packagist.org/packages/bjeavons/zxcvbn-php)
+[![Build Status](https://travis-ci.org/Mirco42/zxcvbn-php-german.png?branch=master)](https://travis-ci.org/Mirco42/zxcvbn-php-german)
+[![Coverage Status](https://coveralls.io/repos/github/Mirco42/zxcvbn-php-german/badge.svg?branch=master)](https://coveralls.io/github/Mirco42/zxcvbn-php-german?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/Mirco42/zxcvbn-php-german/v/stable)](https://packagist.org/packages/Mirco42/zxcvbn-php-german)
+[![License](https://poser.pugx.org/Mirco42/zxcvbn-php-german/license)](https://packagist.org/packages/Mirco42/zxcvbn-php-german)
 
 ## Installation
 
 The library can be installed with [Composer](http://getcomposer.org) by adding it as a dependency to your composer.json file.
 
 Via the command line run:
-`composer require bjeavons/zxcvbn-php`
+`composer require Mirco42/zxcvbn-php-german`
 
 Or in your composer.json add
 ```json
 {
     "require": {
-        "bjeavons/zxcvbn-php": "^1.0"
+        "Mirco42/zxcvbn-php-german": "^1.0"
     }
 }
 ```
