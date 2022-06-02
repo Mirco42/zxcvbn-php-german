@@ -1,14 +1,14 @@
 {
-    "name": "mirco42/zxcvbn-php-german",
+    "name": "nostromo/zxcvbn-php-german",
     "type": "library",
     "description": "Realistic password strength estimation PHP library based on Zxcvbn JS",
     "keywords": ["zxcvbn","password"],
-    "homepage": "https://github.com/Mirco42/zxcvbn-php-german",
+    "homepage": "https://github.com/apiida/zxcvbn-php-german.git",
     "license": "MIT",
     "authors": [
         {
             "name": "See contributors",
-            "homepage": "https://github.com/Mirco42/zxcvbn-php-german"
+            "homepage": "https://github.com/apiida/zxcvbn-php-german.git"
         }
     ],
     "require": {
