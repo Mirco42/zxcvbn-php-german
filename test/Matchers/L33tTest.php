@@ -8,7 +8,7 @@ use ReflectionClass;
 use ZxcvbnPhp\Matchers\L33tMatch;
 use ZxcvbnPhp\Matchers\BaseMatch;
 
-class L33tTest extends AbstractMatchTest
+class L33tTest extends AbstractMatchTestCase
 {
     protected $testTable = [
         'a' => ['4', '@'],

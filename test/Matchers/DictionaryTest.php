@@ -6,7 +6,7 @@ namespace ZxcvbnPhp\Test\Matchers;
 
 use ZxcvbnPhp\Matchers\DictionaryMatch;
 
-class DictionaryTest extends AbstractMatchTest
+class DictionaryTest extends AbstractMatchTestCase
 {
     protected static $testDicts = [
         'd1' => [

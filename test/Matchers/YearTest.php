@@ -10,7 +10,7 @@ use ZxcvbnPhp\Matchers\YearMatch;
 /**
  * @covers \ZxcvbnPhp\Matchers\YearMatch
  */
-class YearTest extends AbstractMatchTest
+class YearTest extends AbstractMatchTestCase
 {
     public function testNoMatchForNonYear()
     {

@@ -6,7 +6,7 @@ namespace ZxcvbnPhp\Test\Matchers;
 
 use ZxcvbnPhp\Matchers\ReverseDictionaryMatch;
 
-class ReverseDictionaryTest extends AbstractMatchTest
+class ReverseDictionaryTest extends AbstractMatchTestCase
 {
     protected static $testDicts = [
         'd1' => [

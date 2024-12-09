@@ -6,7 +6,7 @@ namespace ZxcvbnPhp\Test\Matchers;
 
 use ZxcvbnPhp\Matchers\DateMatch;
 
-class DateTest extends AbstractMatchTest
+class DateTest extends AbstractMatchTestCase
 {
     public function separatorProvider()
     {

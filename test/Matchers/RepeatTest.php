@@ -13,7 +13,7 @@ use ZxcvbnPhp\Scorer;
 /**
  * @covers \ZxcvbnPhp\Matchers\RepeatMatch
  */
-class RepeatTest extends AbstractMatchTest
+class RepeatTest extends AbstractMatchTestCase
 {
     public function testEmpty()
     {

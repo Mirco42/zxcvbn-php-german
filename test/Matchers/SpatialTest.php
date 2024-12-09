@@ -11,7 +11,7 @@ use ZxcvbnPhp\Math\Binomial;
 /**
  * @covers \ZxcvbnPhp\Matchers\SpatialMatch
  */
-class SpatialTest extends AbstractMatchTest
+class SpatialTest extends AbstractMatchTestCase
 {
     /**
      * @return string[][]

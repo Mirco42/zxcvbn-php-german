@@ -9,7 +9,7 @@ use ZxcvbnPhp\Matchers\SequenceMatch;
 /**
  * @covers \ZxcvbnPhp\Matchers\SequenceMatch
  */
-class SequenceTest extends AbstractMatchTest
+class SequenceTest extends AbstractMatchTestCase
 {
     public function shortPasswordProvider()
     {

@@ -6,7 +6,7 @@ namespace ZxcvbnPhp\Test\Matchers;
 
 use ZxcvbnPhp\Matchers\Bruteforce;
 
-class BruteforceTest extends AbstractMatchTest
+class BruteforceTest extends AbstractMatchTestCase
 {
     public function testMatch()
     {
