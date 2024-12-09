@@ -124,35 +124,35 @@ class L33tTest extends AbstractMatchTestCase
         );
     }
 
-    public function commonCaseProvider(): array
+    public static function commonCaseProvider(): array
     {
         return [
             [
                 'password'        => 'p4ssword',
                 'pattern'         => 'p4ssword',
                 'word'            => 'password',
-                'dictionary_name' => 'words',
+                'dictionary'      => 'words',
                 'rank'            => 3,
                 'ij'              => [0, 7],
-                'sub'             => ['4' => 'a']
+                'substitutions'   => ['4' => 'a']
             ],
             [
                 'password'        => 'p@ssw0rd',
                 'pattern'         => 'p@ssw0rd',
                 'word'            => 'password',
-                'dictionary_name' => 'words',
+                'dictionary'      => 'words',
                 'rank'            => 3,
                 'ij'              => [0, 7],
-                'sub'             => ['@' => 'a', '0' => 'o']
+                'substitutions'   => ['@' => 'a', '0' => 'o']
             ],
             [
                 'password'        => 'aSdfO{G0asDfO',
                 'pattern'         => '{G0',
                 'word'            => 'cgo',
-                'dictionary_name' => 'words2',
+                'dictionary'      => 'words2',
                 'rank'            => 1,
                 'ij'              => [5, 7],
-                'sub'             => ['{' => 'c', '0' => 'o']
+                'substitutions'   => ['{' => 'c', '0' => 'o']
             ],
         ];
     }
@@ -289,7 +289,7 @@ class L33tTest extends AbstractMatchTestCase
         );
     }
 
-    public function variationsProvider(): array
+    public static function variationsProvider(): array
     {
         return [
             [ '',  1, [] ],

@@ -28,7 +28,7 @@ class MatchTest extends TestCase
     /**
      * @return float[][]
      */
-    public function log10Provider(): array
+    public static function log10Provider(): array
     {
         return [
             [1.0, 0.0],

@@ -68,7 +68,7 @@ class TimeEstimatorTest extends TestCase
         $this->assertSame('2 seconds', $actual, "plural if unit value is more than 1");
     }
 
-    public function unitProvider()
+    public static function unitProvider()
     {
         return [
             [1e2, '10 seconds'],
@@ -107,7 +107,7 @@ class TimeEstimatorTest extends TestCase
         $this->assertSame(0.01, $actual, "decimal speed when less than one second");
     }
 
-    public function scoreProvider()
+    public static function scoreProvider()
     {
         return [
             [1e2, 0],

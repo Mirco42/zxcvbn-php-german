@@ -240,7 +240,7 @@ class RepeatTest extends AbstractMatchTestCase
         );
     }
 
-    public function guessesProvider()
+    public static function guessesProvider()
     {
         return array(
             [ 'aa',   'a',  2,  24],

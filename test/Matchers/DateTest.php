@@ -8,7 +8,7 @@ use ZxcvbnPhp\Matchers\DateMatch;
 
 class DateTest extends AbstractMatchTestCase
 {
-    public function separatorProvider()
+    public static function separatorProvider()
     {
         return [
             [''],
@@ -88,7 +88,7 @@ class DateTest extends AbstractMatchTestCase
         );
     }
 
-    public function normalDateProvider()
+    public static function normalDateProvider()
     {
         return [
             [1,  1,  1999],

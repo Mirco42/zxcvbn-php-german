@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ZxcvbnPhp\Test;
 
+use Exception;
 use PHPUnit\Framework\TestCase;
 use ZxcvbnPhp\Matchers\Bruteforce;
 use ZxcvbnPhp\Matchers\DictionaryMatch;
@@ -33,7 +34,7 @@ class ZxcvbnTest extends TestCase
         $this->assertSame(50.0, $matches[1]->getGuesses());
     }
 
-    public function typeDataProvider()
+    public static function typeDataProvider()
     {
         return [
             ['password', 'string'],
@@ -49,7 +50,7 @@ class ZxcvbnTest extends TestCase
 
     /**
      * @dataProvider typeDataProvider
-     * @throws \Exception
+     * @throws Exception
      */
     public function testZxcvbnReturnTypes($key, $type)
     {
@@ -65,13 +66,13 @@ class ZxcvbnTest extends TestCase
         } elseif ($type === 'array') {
             $correct = is_array($result[$key]);
         } else {
-            throw new \Exception('Invalid test case');
+            throw new Exception('Invalid test case');
         }
 
         $this->assertTrue($correct, "zxcvbn result value " . $key . " is type " . $type);
     }
 
-    public function sanityCheckDataProvider()
+    public static function sanityCheckDataProvider()
     {
         return [
             ['password', 0, ['dictionary',], 'less than a second', 3],
@@ -89,7 +90,7 @@ class ZxcvbnTest extends TestCase
     }
 
     /**
-     * Some basic sanity checks. All of the underlying functionality is tested in more details in their specific
+     * Some basic sanity checks. All the underlying functionality is tested in more details in their specific
      * classes, but this is just to check that it's all tied together correctly at the end.
      * @dataProvider sanityCheckDataProvider
      * @param string $password

@@ -18,7 +18,7 @@ class YearTest extends AbstractMatchTestCase
         $this->assertEmpty(YearMatch::match($password));
     }
 
-    public function recentYearProvider()
+    public static function recentYearProvider()
     {
         return [
             ['1922'],
@@ -43,7 +43,7 @@ class YearTest extends AbstractMatchTestCase
         );
     }
 
-    public function nonRecentYearProvider()
+    public static function nonRecentYearProvider()
     {
         return [
             ['1420'],

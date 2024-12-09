@@ -11,7 +11,7 @@ use ZxcvbnPhp\Matchers\SequenceMatch;
  */
 class SequenceTest extends AbstractMatchTestCase
 {
-    public function shortPasswordProvider()
+    public static function shortPasswordProvider()
     {
         return [
             [''],
@@ -74,7 +74,7 @@ class SequenceTest extends AbstractMatchTestCase
         }
     }
 
-    public function sequenceProvider()
+    public static function sequenceProvider()
     {
         return [
             ['ABC',   'upper',  true],
@@ -164,7 +164,7 @@ class SequenceTest extends AbstractMatchTestCase
         );
     }
 
-    public function guessProvider()
+    public static function guessProvider()
     {
         return array(
             array('ab',   true,  4 * 2),        // obvious start * len-2

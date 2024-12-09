@@ -28,7 +28,7 @@ class DictionaryTest extends AbstractMatchTestCase
     /**
      * @return string[][]
      */
-    public function madeUpWordsProvider(): array
+    public static function madeUpWordsProvider(): array
     {
         return [
             ['jjj'],
@@ -47,24 +47,25 @@ class DictionaryTest extends AbstractMatchTestCase
     }
 
     /**
-     * @dataProvider madeUpWordsProvider
-     * @param string $password
+     * @return string[][]
      */
-    public function testGermanWordsInDictionary(): void
+    public static function realWordsProvider(): array
     {
-        $matches = DictionaryMatch::match('und');
-        $this->assertNotEmpty($matches, "does not match dictionary words");
+        return [
+            ['und'],
+            ['buchmacher'],
+            ['fußspuren'],
+            ['japanerin'],
+            ['überdauert'],
+        ];
+    }
 
-        $matches = DictionaryMatch::match('buchmacher');
-        $this->assertNotEmpty($matches, "does not match dictionary words");
-
-        $matches = DictionaryMatch::match('fußspuren');
-        $this->assertNotEmpty($matches, "does not match dictionary words");
-
-        $matches = DictionaryMatch::match('japanerin');
-        $this->assertNotEmpty($matches, "does not match dictionary words");
-
-        $matches = DictionaryMatch::match('überdauert');
+    /**
+     * @dataProvider realWordsProvider
+     */
+    public function testGermanWordsInDictionary(string $password): void
+    {
+        $matches = DictionaryMatch::match($password);
         $this->assertNotEmpty($matches, "does not match dictionary words");
     }
 
@@ -266,7 +267,7 @@ class DictionaryTest extends AbstractMatchTestCase
     /**
      * @return array[]
      */
-    public function uppercaseVariationProvider(): array
+    public static function uppercaseVariationProvider(): array
     {
         return [
             ['', 1],

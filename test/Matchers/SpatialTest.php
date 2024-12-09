@@ -16,7 +16,7 @@ class SpatialTest extends AbstractMatchTestCase
     /**
      * @return string[][]
      */
-    public function shortPatternDataProvider(): array
+    public static function shortPatternDataProvider(): array
     {
         return [
             [''],
@@ -70,7 +70,7 @@ class SpatialTest extends AbstractMatchTestCase
         );
     }
 
-    public function spatialDataProvider(): array
+    public static function spatialDataProvider(): array
     {
         return [
             ['12345',        'qwerty',     1, 0],
@@ -193,7 +193,7 @@ class SpatialTest extends AbstractMatchTestCase
     /**
      * @return array[]
      */
-    public function complexGuessProvider(): array
+    public static function complexGuessProvider(): array
     {
         return [
             ['6yhgf',        2, 19596],

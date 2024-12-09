@@ -10,7 +10,7 @@ use ZxcvbnPhp\Math\BinomialProvider;
 
 class BinomialTest extends TestCase
 {
-    public function binomialDataProvider()
+    public static function binomialDataProvider()
     {
         return [
             [     0,    0,           1.0 ],
